@@ -78,8 +78,10 @@ END
 --SpGetData '4'
 EXEC SpGetData '4';
 
+****is null ****
+select Id,Name,Email,ISNULL(GendarId,999) GendarId from TblPerson
 
-
+select A.Id,A.Name,A.Email,REPLACE(ISNULL(A.GendarId,999),999,11) GendarId from TblPerson A
 
 
 
