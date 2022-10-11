@@ -83,6 +83,16 @@ select Id,Name,Email,ISNULL(GendarId,999) GendarId from TblPerson
 
 select A.Id,A.Name,A.Email,REPLACE(ISNULL(A.GendarId,999),999,11) GendarId from TblPerson A
 
+***Stored Procedure***
+CREATE PROCEDURE spGetEmployees
+ as
+ begin
+	select [Name],Gender from TblEmployee
+end 
+
+Run:- Execute spGetEmployees
+
+
 
 
 
